@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+      integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      #login,
+      #loggedin {
+        display: none;
+      }
+      .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 500px;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/8639625916.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="login">
+      <div class="titleCenter">
+        <h1 class="title display-1">Wrap</h1>
+        <a href="/login" class="loginBtn btn btn-primary btn-lg"
+          ><i class="icon fa-lg fab fa-spotify"></i>Log in with Spotify</a
+        >
+      </div>
+    </div>
+
+    <div id="loggedin">
+      <div id="user-profile"></div>
+      <div class="blackBg">
+        <div id="top-artists"></div>
+        <div id="top-tracks"></div>
+      </div>
+    </div>
+
+    <script id="user-profile-template" type="text/x-handlebars-template">
+      <div class="center">
+        <div class="userName">
+          <h1 class="name">
+            Hi {{firstName display_name}}
+          </h1>
+          <small>
+            These are the artists with the most tracks in your Top Songs 2020 playlist
+          </small>
+        </div>
+      </div>
+    </script>
+
+    <script id="top-artists-template" type="text/x-handlebars-template">
+      <h3 class="card-title">
+        Artists
+      </h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {{#each items}}
+            <li class="list-group-item">
+              {{inc @index}}.
+              <img class="rounded" width="50" src="{{url}}" />
+              {{name}} - {{count}} Tracks
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      <footer class="center">
+        <small class="credits">
+          By
+          <a class="instaLink" href="https://www.instagram.com/seandiacono/">
+            Sean Diacono
+          </a>
+        </small>
+      </footer>
+    </script>
+
+    <script id="top-tracks-template" type="text/x-handlebars-template"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+.center {
+  width: 100%;
+  text-align: center;
+}
+
+.userName {
+  margin: 1rem;
+  display: inline-block;
+}
+
+.credits {
+  margin: 0.25rem;
+  display: inline-block;
+}
+
+.titleCenter {
+  display: inline-block;
+  padding-top: 10rem;
+}
+
+.loginBtn {
+  margin-top: 45vh;
+}
+
+.card {
+  background-color: black;
+}
+
+.card-title {
+  margin: 0.5rem;
+}
+
+.card-body {
+  margin: 0.5rem;
+  background-color: black;
+}
+
+.list-group-item {
+  background-color: black;
+  white-space: nowrap;
+}
+
+.name {
+  white-space: nowrap;
+}
+
+.btn {
+  background-color: #1db954;
+  border-radius: 30px;
+}
+
+.icon {
+  margin-right: 1rem;
+}
+
+.title {
+  color: white;
+}
+
+.blackBg {
+  background-color: black;
+}
+
+.instaLink {
+  color: white;
+  text-decoration: underline;
+}
+
+img {
+  border-radius: 5px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+  background-color: black;
+}
+
+#login {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-image: url("../Assets/background/3551288.jpg");
+}
+
+#loggedin {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}

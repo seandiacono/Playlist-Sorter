@@ -1,0 +1,33 @@
+{
+  "name": "spotify-stats",
+  "version": "1.0.0",
+  "description": "web app to track stats",
+  "main": "app.js",
+  "dependencies": {
+    "common": "^0.2.5",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2",
+    "spotify-web-api-js": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seandiacono/Spotify-Stats.git"
+  },
+  "keywords": [
+    "spotify"
+  ],
+  "author": "Sean Diacono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seandiacono/Spotify-Stats/issues"
+  },
+  "homepage": "https://github.com/seandiacono/Spotify-Stats#readme"
+}
