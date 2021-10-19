@@ -3,9 +3,10 @@ var request = require("request"); // "Request" library
 var cors = require("cors");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
+require('dotenv').config();
 
-var client_id = "a2477e9175b640f78d1101c1e69be9df"; // Your client id
-var client_secret = "dedaa1d9738c4d9ea8fd7b1fe97e11c9"; // Your secret
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
 var redirect_uri = "http://localhost:8888/callback"; // Your redirect uri
 
 /**
