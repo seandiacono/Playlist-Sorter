@@ -54,10 +54,12 @@
       <div class="center">
         <div class="userName">
           <h1 class="name">
-            Hi {{firstName display_name}}
+            Hi
+            {{firstName display_name}}
           </h1>
           <small>
-            These are the artists with the most tracks in your Top Songs 2020 playlist
+            The tracks within the sorting playlist were sorted as described
+            bellow.
           </small>
         </div>
       </div>
@@ -73,7 +75,10 @@
             <li class="list-group-item">
               {{inc @index}}.
               <img class="rounded" width="50" src="{{url}}" />
-              {{name}} - {{count}} Tracks
+              {{name}}
+              -
+              {{count}}
+              Tracks
             </li>
           {{/each}}
         </ul>
@@ -90,7 +95,7 @@
 
     <script id="top-tracks-template" type="text/x-handlebars-template"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-1.12.4.js"
       integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="

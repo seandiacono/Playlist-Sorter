@@ -4,9 +4,9 @@ var cors = require("cors");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
 
-var client_id = "74d99be1f2a3475f9edabdc06ab162b2"; // Your client id
-var client_secret = "7b9e006235a44107b0e2352aa7a60c44"; // Your secret
-var redirect_uri = "https://infinite-harbor-88430.herokuapp.com/callback"; // Your redirect uri
+var client_id = "a2477e9175b640f78d1101c1e69be9df"; // Your client id
+var client_secret = "dedaa1d9738c4d9ea8fd7b1fe97e11c9"; // Your secret
+var redirect_uri = "http://localhost:8888/callback"; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -40,7 +40,7 @@ app.get("/login", function (req, res) {
   // your application requests authorization
   var scope =
     "user-read-private user-read-email user-top-read playlist-read-private playlist-modify-private playlist-modify-public user-library-read";
-  res.redirect(
+    res.redirect(
     "https://accounts.spotify.com/authorize?" +
       querystring.stringify({
         response_type: "code",
@@ -50,11 +50,15 @@ app.get("/login", function (req, res) {
         state: state,
       })
   );
+
+  console.log('login finished')
 });
 
 app.get("/callback", function (req, res) {
   // your application requests refresh and access tokens
   // after checking the state parameter
+
+  console.log('hi')
 
   var code = req.query.code || null;
   var state = req.query.state || null;
